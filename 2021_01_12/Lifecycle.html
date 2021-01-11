@@ -9,27 +9,16 @@
 
 <body>
     <div id="app">
-        <button @:click="pushTodo">Push</button>
-        <ul class="todos">
-            <li v-for="todo in todos" :key="todo.id">{{todo.title}}</li>
-        </ul>
+        <input type="text" v-model="message">
+        <div>{{message}}</div>
     </div>
 
     <script>
         const vm = new Vue({
             el: '#app',
             data: {
-                todos:[
-                    {title: '아침 먹기', id:1},
-                    {title: '점심 먹기', id:2},
-                    {title: '저녁 먹기', id:3}
-                ]
+                message: 'Hello Vue!'
             },
-            methods:{
-                pushTodo(){
-                    this.todos.push({title:'야식 먹기', id:4})
-                }
-            }
         })
     </script>
 </body>
