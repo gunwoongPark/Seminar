@@ -1,0 +1,13 @@
+Design Pattern
+
+https://gmlwjd9405.github.io/2018/07/06/design-pattern.html
+https://readystory.tistory.com/114
+https://rhea31.gitbook.io/blog/development/more/undefined/whatisit
+
+
+
+MVC, MVP, MVVM
+
+https://beomy.tistory.com/43
+https://mygumi.tistory.com/304
+https://magi82.github.io/android-mvc-mvp-mvvm/
