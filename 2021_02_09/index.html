@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>{{ count }}</h1>
+      <!-- {{calculated}} -->
+      <button @click="count --">카운트 감소</button>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          count: 3,
+        },
+        computed: {
+          calculated() {
+            if (this.count === 2) alert("값이 2가 되었습니다.");
+          },
+        },
+
+        watch: {
+          count(newVal) {
+            if (newVal === 0) {
+              alert("값이 0이 되었습니다.");
+              this.count = 3;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
+
