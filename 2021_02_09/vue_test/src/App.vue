@@ -2,7 +2,7 @@
   <div>
     <Header />
     <Body />
-    <Footer />
+    <Footer :userName="userName" @myEvent="updateName" />
   </div>
 </template>
 
@@ -15,6 +15,16 @@ export default {
     Header,
     Body,
     Footer,
+  },
+  data() {
+    return {
+      userName: "홍길동",
+    };
+  },
+  methods: {
+    updateName(newName) {
+      this.userName = newName;
+    },
   },
 };
 </script>

@@ -78,6 +78,6 @@ export default {
 }
 
 .infoContainer {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 </style>

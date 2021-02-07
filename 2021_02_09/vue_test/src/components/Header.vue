@@ -28,7 +28,6 @@ export default {};
   left: 0;
   background: rgb(255, 255, 255, 0.7);
   justify-content: space-between;
-
   z-index: 10;
 }
 
