@@ -1,23 +1,23 @@
 <template>
-  <v-app>
-    <div class="test">test</div>
-  </v-app>
+  <div>
+    <Header />
+    <Body />
+    <Footer />
+  </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
+import Body from "./components/Body.vue";
+import Footer from "./components/Footer.vue";
 export default {
-  name: "App",
-
-  components: {},
-
-  data: () => ({
-    //
-  }),
+  components: {
+    Header,
+    Body,
+    Footer,
+  },
 };
 </script>
 
-<style scoped>
-.test {
-  background: aqua;
-}
+<style>
 </style>
