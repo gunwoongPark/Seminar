@@ -8,33 +8,36 @@
 
   <body>
     <div id="app">
-      <h1>{{ count }}</h1>
-      <!-- {{calculated}} -->
-      <button @click="count --">카운트 감소</button>
+      <div class="todos">
+        <div v-for="todo in computedTodos" :key="todo.id">
+          <input type="checkbox" v-model="todo.done" />
+          <span>{{todo.title}}</span>
+        </div>
+      </div>
     </div>
 
     <script>
       const vm = new Vue({
         el: "#app",
         data: {
-          count: 3,
+          todos: [
+            { title: "아침 먹기" },
+            { title: "점심 먹기" },
+            { title: "저녁 먹기" },
+          ],
         },
         computed: {
-          calculated() {
-            if (this.count === 2) alert("값이 2가 되었습니다.");
-          },
-        },
-
-        watch: {
-          count(newVal) {
-            if (newVal === 0) {
-              alert("값이 0이 되었습니다.");
-              this.count = 3;
-            }
+          computedTodos() {
+            return this.todos.map((todo, index) => {
+              return {
+                ...todo,
+                id: index + 1,
+                done: false,
+              };
+            });
           },
         },
       });
     </script>
   </body>
 </html>
-
