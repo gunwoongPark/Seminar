@@ -1,5 +1,5 @@
 module.exports = {
-  transpileDependencies: [
-    'vuetify'
-  ]
-}
+  transpileDependencies: ["vuetify"],
+  publicPath: "/ssl-chatbot-test/",
+  outputDir: "docs",
+};
