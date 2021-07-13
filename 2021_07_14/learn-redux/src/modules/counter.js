@@ -28,4 +28,3 @@ export default function counter(state = initialState, action) {
       return state;
   }
 }
-

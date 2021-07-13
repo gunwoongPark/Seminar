@@ -1,17 +1,7 @@
-import React, { useState } from "react";
-import OriginCounterContainer from "./containers/OriginCounterContainer";
+import CounterContainer from "./containers/CounterContainer";
 
 function App() {
-  const [number, setNumber] = useState(0);
-  const [diff, setDiff] = useState(1);
-  return (
-    <OriginCounterContainer
-      number={number}
-      diff={diff}
-      setNumber={setNumber}
-      setDiff={setDiff}
-    />
-  );
+  return <CounterContainer />;
 }
 
 export default App;
