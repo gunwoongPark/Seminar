@@ -1,6 +1,6 @@
 import { createStore } from "redux";
 
-// 초기값
+// 초기상태
 const initialState = {
   counter: 0,
   text: "",
